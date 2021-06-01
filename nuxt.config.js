@@ -1,6 +1,7 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
+  buildDir: "dist",
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -35,10 +36,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/tailwindcss
-    "@nuxtjs/tailwindcss"
-  ],
+  buildModules: ["@nuxtjs/tailwindcss"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
