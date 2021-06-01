@@ -84,6 +84,7 @@
     <section id="contacto" class="flex justify-center w-full py-16">
       <form
         class="w-1/3 bg-primary px-8 rounded-md my-12"
+        name="contact"
         method="POST"
         data-netlify="true"
       >
