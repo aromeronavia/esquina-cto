@@ -82,33 +82,33 @@
     </section>
 
     <section id="contacto" class="flex justify-center w-full py-16">
-      <form class="w-1/3 bg-primary px-8 rounded my-12" netlify>
+      <form class="w-1/3 bg-primary px-8 rounded-md my-12" netlify>
         <label class="pt-8 text-center text-xl block text-white"
           >¿Te interesa contactar con nosotros?</label
         >
         <input
-          class="mt-9 p-2 block w-full"
+          class="mt-9 p-2 block rounded-md w-full"
           name="name"
           type="text"
           placeholder="Nombre"
           required
         />
         <input
-          class="mt-5 p-2 rounded block w-full"
+          class="mt-5 p-2 rounded-md block w-full"
           name="email"
           type="email"
           placeholder="email@example.com"
           required
         />
         <textarea
-          class="mt-5 p-2 rounded block w-full resize-none"
+          class="mt-5 p-2 rounded-md block w-full resize-none"
           name="message"
           rows="3"
           placeholder="Hola!"
           required
         />
         <button
-          class="w-1/2 bg-white text-primary mt-8 p-2 rounded block text-center mx-auto mb-10"
+          class="w-1/2 bg-white text-primary mt-8 p-2 rounded-md block text-center mx-auto mb-10"
           type="submit"
         >
           Enviar
