@@ -8,8 +8,14 @@
         <li class="inline-block mr-8">
           <a href="#nosotros">Quienes Somos</a>
         </li>
-        <li class="inline-block mr-8">Contacto</li>
-        <li class="inline-block font-bold text-primary">Únete al grupo</li>
+        <li class="inline-block mr-8">
+          <a href="#contacto">Contacto</a>
+        </li>
+        <li class="inline-block font-bold text-primary">
+          <a href="https://www.linkedin.com/groups/12533842/" target="_blank"
+            >Únete al grupo</a
+          >
+        </li>
       </ul>
     </nav>
     <section class="mt-10 ml-11 mb-24">
@@ -74,6 +80,49 @@
         </p>
       </div>
     </section>
+
+    <section id="contacto" class="flex justify-center w-full py-16">
+      <form class="w-1/3 bg-primary px-8 rounded my-12" netlify>
+        <label class="pt-8 text-center text-xl block text-white"
+          >¿Te interesa contactar con nosotros?</label
+        >
+        <input
+          class="mt-9 p-2 block w-full"
+          name="name"
+          type="text"
+          placeholder="Nombre"
+          required
+        />
+        <input
+          class="mt-5 p-2 rounded block w-full"
+          name="email"
+          type="email"
+          placeholder="email@example.com"
+          required
+        />
+        <textarea
+          class="mt-5 p-2 rounded block w-full resize-none"
+          name="message"
+          rows="3"
+          placeholder="Hola!"
+          required
+        />
+        <button
+          class="w-1/2 bg-white text-primary mt-8 p-2 rounded block text-center mx-auto mb-10"
+          type="submit"
+        >
+          Enviar
+        </button>
+      </form>
+    </section>
+    <footer class="bg-primary text-white w-full">
+      <p class="py-4 text-center">
+        Encuentranos en
+        <a class="underline" href="https://www.linkedin.com/groups/12533842/">
+          LinkedIn!</a
+        >
+      </p>
+    </footer>
   </div>
 </template>
 
