@@ -82,7 +82,11 @@
     </section>
 
     <section id="contacto" class="flex justify-center w-full py-16">
-      <form class="w-1/3 bg-primary px-8 rounded-md my-12" netlify>
+      <form
+        class="w-1/3 bg-primary px-8 rounded-md my-12"
+        method="POST"
+        data-netlify="true"
+      >
         <label class="pt-8 text-center text-xl block text-white"
           >¿Te interesa contactar con nosotros?</label
         >
