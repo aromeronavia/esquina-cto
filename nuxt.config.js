@@ -1,5 +1,6 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
+  ssr: false,
   target: "static",
   buildDir: "dist",
   generate: {
@@ -8,7 +9,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "esquina-cto",
+    title: "Esquina CTO",
     htmlAttrs: {
       lang: "en"
     },
