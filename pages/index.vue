@@ -89,6 +89,7 @@
         netlify
         netlify-honeypot="bot-field"
       >
+        <input type="hidden" name="form-name" value="contact" />
         <label class="pt-8 text-center text-xl block text-white"
           >¿Te interesa contactar con nosotros?</label
         >
@@ -116,6 +117,7 @@
         <button
           class="w-1/2 bg-white text-primary mt-8 p-2 rounded-md block text-center mx-auto mb-10"
           type="submit"
+          value="Send Message"
         >
           Enviar
         </button>
