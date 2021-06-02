@@ -1,5 +1,9 @@
 <template>
-  <a href="#">
+  <a
+    class="block"
+    href="https://www.linkedin.com/groups/12533842/"
+    target="_blank"
+  >
     <svg
       class="mx-auto"
       width="64"
@@ -14,8 +18,8 @@
         fill="#F8F8F8"
       />
     </svg>
-    <p class="font-black text-md mt-2 text-center sm:text-left">
-      <a href="https://www.linkedin.com/groups/12533842/">Ver Todos</a>
+    <p class="font-black text-md mt-2 text-center lg:text-left">
+      Ver Todos
     </p>
   </a>
 </template>

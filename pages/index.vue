@@ -18,11 +18,14 @@
         </li>
       </ul>
     </nav>
-    <section class="mt-5 mb-12 sm:mt-10 sm:ml-8 sm:ml-11 sm:mb-0">
-      <h1 class="text-3xl text-center mx-4 sm:ml-4 sm:text-left sm:w-1/3">
+    <section class="mt-5 mb-12 sm:mt-8 sm:ml-8 sm:ml-11 xl:mb-32">
+      <h1 class="text-3xl text-center mx-4 sm:ml-4 sm:text-left lg:w-1/3">
         Somos una comunidad que reúne líderes de tecnología en México
       </h1>
-      <div class="mt-11 grid grid-cols-2 content-center visible sm:hidden">
+      <!-- Mobile View -->
+      <div
+        class="mt-11 grid grid-cols-2 content-center visible sm:grid-cols-4 lg:hidden"
+      >
         <Member
           v-for="member in members"
           class="mb-6 mx-auto inline-block sm:block"
@@ -33,11 +36,12 @@
           :company="member.company"
         />
       </div>
-      <div class="hidden sm:visible sm:flex sm:items-center">
+      <!-- Desktop View -->
+      <div class="hidden lg:flex lg:items-center">
         <div class="mt-11 flex flex-wrap w-2/3">
           <Member
             v-for="member in members"
-            class="mr-6 mb-6 inline-block sm:block"
+            class="mr-6 mb-6 inline-block lg:block"
             :key="member.name"
             :imageUrl="member.imageUrl"
             :name="member.name"
@@ -45,33 +49,33 @@
             :company="member.company"
           />
         </div>
-        <SeeMore class="invisible sm:visible inline" />
+        <SeeMore class="hidden lg:block inline" />
       </div>
-      <SeeMore class="visible sm:invisible inline" />
+      <SeeMore class="mt-2 lg:hidden" />
     </section>
     <section
       id="nosotros"
-      class="w-full bg-primary text-white pt-8 sm:py-12 lg:grid lg:grid-cols-2"
+      class="w-full bg-primary text-white pt-12 sm:py-12 lg:grid lg:grid-cols-2"
     >
-      <div class="text-center mx-5 lg:mx-0 lg:ml-8">
-        <h1 class="text-xl lg:text-3xl w-full lg:w-1/2 lg:ml-4">
+      <ul class="text-center mx-5 hidden lg:block lg:mx-0 lg:ml-8">
+        <li class="text-xl lg:text-3xl w-full lg:w-1/2 lg:ml-4">
           Compartimos conocimientos y experiencia de cómo hacer tecnología
-        </h1>
-        <h1 class="mt-5 text-xl w-full lg:w-1/2 lg:mt-20 lg:ml-4 lg:text-3xl">
+        </li>
+        <li class="text-xl w-full lg:w-1/2 lg:mt-20 lg:ml-4 lg:text-3xl">
           Buscamos tener un impacto positivo en la vida de las personas que nos
           rodean
-        </h1>
-        <h1 class="mt-5 text-xl w-full lg:w-1/2 lg:mt-20 lg:ml-4 lg:text-3xl">
+        </li>
+        <li class="text-xl w-full lg:w-1/2 lg:mt-20 lg:ml-4 lg:text-3xl">
           Nos reunimos para resolver problemas de diferentes maneras
-        </h1>
-      </div>
-      <div class="mt-12 w-full lg:pr-32 lg:mt-0">
+        </li>
+      </ul>
+      <div class="w-full lg:pr-32 lg:mt-0">
         <p class="text-xl text-center mb-8 lg:text-2xl">
           Fundadores de Esquina CTO
         </p>
-        <div class="flex justify-around">
+        <div class="flex justify-around mx-3 lg:mx-0">
           <Member
-            class="mr-8"
+            class="mr-2 sm:mr-8"
             name="Alberto Romero"
             imageUrl="https://media-exp1.licdn.com/dms/image/C4D03AQGrpxlB5HsmCg/profile-displayphoto-shrink_800_800/0/1594865592548?e=1628121600&v=beta&t=-Quy4NvRzzJ1BvRq59P5tn0OS6kxNNFYjLiaSHlWIfE"
             position="Engineering Lead"
@@ -80,25 +84,25 @@
           <Member
             name="Aaron Munguia"
             imageUrl="https://media-exp1.licdn.com/dms/image/C5603AQFXGgwmGFadmA/profile-displayphoto-shrink_800_800/0/1612370028700?e=1628121600&v=beta&t=Zya7-vExedCFsp_MPa_U978tCggYTqz-Ohlubh8ipnA"
-            position="Chief Technology Officer"
+            position="CTO"
             company="Tu Identidad"
           />
           <Member
-            class="mr-8"
+            class="ml-2 sm:ml-8"
             name="Genaro Madrid"
             imageUrl="https://ca.slack-edge.com/TTDGSHWAZ-UTDHDR5HT-1e7b405a58c1-512"
             position="CTO"
             company="MiFiel"
           />
         </div>
-        <p class="mx-8 mt-9 pb-10 text-justify md:pb-0">
+        <p
+          class="px-8 mt-9 pb-12 w-full text-center text-justify md:mx-auto md:w-1/2 md:px-0 md:pb-0 lg:w-full lg:mx-auto"
+        >
           “Nos juntamos el último jueves de cada mes a discutir temas de
           relevancia en nuestros puestos, tales como Product Management, People
           Management, Procesos de Desarrollo, Trabajo Remoto, etc., hasta temas
           como Seguridad Cibernética, Bases de datos, Escalabilidad,
-          Certificaciones SOC2/PCI, entre otros. Te invito a que si tienes un
-          perfil de liderazgo tecnológico y quieres aportar a nuestra comunidad,
-          ¡te nos unas!”
+          Certificaciones SOC2/PCI, entre otros temas."
         </p>
       </div>
     </section>
