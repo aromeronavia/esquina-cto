@@ -86,7 +86,8 @@
         class="w-1/3 bg-primary px-8 rounded-md my-12"
         name="contact"
         method="POST"
-        data-netlify="true"
+        netlify
+        netlify-honeypot="bot-field"
       >
         <label class="pt-8 text-center text-xl block text-white"
           >¿Te interesa contactar con nosotros?</label
