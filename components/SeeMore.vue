@@ -14,6 +14,8 @@
         fill="#F8F8F8"
       />
     </svg>
-    <p class="font-black text-md mt-2">Ver Todos</p>
+    <p class="font-black text-md mt-2 text-center sm:text-left">
+      <a href="https://www.linkedin.com/groups/12533842/">Ver Todos</a>
+    </p>
   </a>
 </template>

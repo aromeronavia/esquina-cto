@@ -4,7 +4,7 @@
       class="h-24 flex items-center justify-between px-9 py-4 border-b border-gray-200"
     >
       <Logo />
-      <ul class="text-xl">
+      <ul class="invisible text-xl sm:visible">
         <li class="inline-block mr-8">
           <a href="#nosotros">Quienes Somos</a>
         </li>
@@ -18,15 +18,26 @@
         </li>
       </ul>
     </nav>
-    <section class="mt-10 ml-11 mb-24">
-      <h1 class="text-3xl ml-4 w-1/3">
+    <section class="mt-5 mb-12 sm:mt-10 sm:ml-8 sm:ml-11 sm:mb-0">
+      <h1 class="text-3xl text-center mx-4 sm:ml-4 sm:text-left sm:w-1/3">
         Somos una comunidad que reúne líderes de tecnología en México
       </h1>
-      <div class="flex items-center">
-        <div class="mt-11 w-2/3 flex flex-wrap">
+      <div class="mt-11 grid grid-cols-2 content-center visible sm:hidden">
+        <Member
+          v-for="member in members"
+          class="mb-6 mx-auto inline-block sm:block"
+          :key="member.name"
+          :imageUrl="member.imageUrl"
+          :name="member.name"
+          :position="member.position"
+          :company="member.company"
+        />
+      </div>
+      <div class="hidden sm:visible sm:flex sm:items-center">
+        <div class="mt-11 flex flex-wrap w-2/3">
           <Member
             v-for="member in members"
-            class="mr-6 mb-6"
+            class="mr-6 mb-6 inline-block sm:block"
             :key="member.name"
             :imageUrl="member.imageUrl"
             :name="member.name"
@@ -34,26 +45,30 @@
             :company="member.company"
           />
         </div>
-        <SeeMore class="inline" />
+        <SeeMore class="invisible sm:visible inline" />
       </div>
+      <SeeMore class="visible sm:invisible inline" />
     </section>
     <section
       id="nosotros"
-      class="flex w-full h-screen bg-primary text-white pt-24"
+      class="w-full bg-primary text-white pt-8 sm:py-12 lg:grid lg:grid-cols-2"
     >
-      <div class="ml-8">
-        <h1 class="text-3xl ml-4 w-1/2">
+      <div class="text-center mx-5 lg:mx-0 lg:ml-8">
+        <h1 class="text-xl lg:text-3xl w-full lg:w-1/2 lg:ml-4">
           Compartimos conocimientos y experiencia de cómo hacer tecnología
         </h1>
-        <h1 class="mt-20 text-3xl ml-4 w-1/2">
+        <h1 class="mt-5 text-xl w-full lg:w-1/2 lg:mt-20 lg:ml-4 lg:text-3xl">
           Buscamos tener un impacto positivo en la vida de las personas que nos
           rodean
         </h1>
-        <h1 class="mt-20 text-3xl ml-4 w-1/2">
+        <h1 class="mt-5 text-xl w-full lg:w-1/2 lg:mt-20 lg:ml-4 lg:text-3xl">
           Nos reunimos para resolver problemas de diferentes maneras
         </h1>
       </div>
-      <div class="w-1/2 pr-32">
+      <div class="mt-12 w-full lg:pr-32 lg:mt-0">
+        <p class="text-xl text-center mb-8 lg:text-2xl">
+          Fundadores de Esquina CTO
+        </p>
         <div class="flex justify-around">
           <Member
             class="mr-8"
@@ -68,8 +83,15 @@
             position="Chief Technology Officer"
             company="Tu Identidad"
           />
+          <Member
+            class="mr-8"
+            name="Genaro Madrid"
+            imageUrl="https://ca.slack-edge.com/TTDGSHWAZ-UTDHDR5HT-1e7b405a58c1-512"
+            position="CTO"
+            company="MiFiel"
+          />
         </div>
-        <p class="mt-9 text-justify">
+        <p class="mx-8 mt-9 pb-10 text-justify md:pb-0">
           “Nos juntamos el último jueves de cada mes a discutir temas de
           relevancia en nuestros puestos, tales como Product Management, People
           Management, Procesos de Desarrollo, Trabajo Remoto, etc., hasta temas
@@ -83,7 +105,7 @@
 
     <section id="contacto" class="flex justify-center w-full py-16">
       <form
-        class="w-1/3 bg-primary px-8 rounded-md my-12"
+        class="w-full mx-5 bg-primary px-8 rounded-md my-12 sm:w-1/2 xl:w-1/3 sm:mx-0"
         name="contact"
         method="POST"
         netlify
@@ -127,8 +149,8 @@
       <p class="py-4 text-center">
         Encuentranos en
         <a class="underline" href="https://www.linkedin.com/groups/12533842/">
-          LinkedIn!</a
-        >
+          LinkedIn!
+        </a>
       </p>
     </footer>
   </div>
@@ -145,19 +167,79 @@ export default {
       company: "JungleScout"
     };
 
+    const members = [
+      {
+        name: "Omar Baqueiro",
+        imageUrl:
+          "https://ca.slack-edge.com/TTDGSHWAZ-UT3BYHE49-gcf9a7442ead-512",
+        position: "VP of Engineering"
+      },
+      {
+        name: "Genaro Madrid",
+        imageUrl:
+          "https://ca.slack-edge.com/TTDGSHWAZ-UTDHDR5HT-1e7b405a58c1-512",
+        position: "CTO",
+        company: "MiFiel"
+      },
+      {
+        name: "Andres Vejar",
+        imageUrl:
+          "https://ca.slack-edge.com/TTDGSHWAZ-UTFPDDE6A-37d85faea4df-512",
+        position: "CIO",
+        company: "Neubox"
+      },
+      {
+        name: "Abiee Echamea",
+        imageUrl:
+          "https://ca.slack-edge.com/TTDGSHWAZ-U018PPLJG2D-ga48b9837730-512",
+        position: "CTO",
+        company: "100 Ladrillos"
+      },
+      {
+        name: "Carlos González",
+        imageUrl:
+          "https://ca.slack-edge.com/TTDGSHWAZ-U014ELJPX2T-28552529420f-512",
+        position: "CTO",
+        company: "100 Ladrillos"
+      },
+      {
+        name: "Josue Padilla",
+        imageUrl:
+          "https://ca.slack-edge.com/TTDGSHWAZ-U01DB6XU7HV-2aa41fa4960f-512",
+        position: "Infrastructure Engineer",
+        company: "Thredup"
+      },
+      {
+        name: "Manuel de la Torre",
+        imageUrl:
+          "https://ca.slack-edge.com/TTDGSHWAZ-UT0SML3DY-4ba82f51baec-512",
+        position: "Head of Product",
+        company: "Zenfi"
+      },
+      {
+        name: "Javier Coca",
+        imageUrl:
+          "https://ca.slack-edge.com/TTDGSHWAZ-UTVG91Y2J-bec34b773f45-512",
+        position: "Executive Advisor - Engineering Director"
+      },
+      {
+        name: "Cesar Alcaraz",
+        imageUrl:
+          "https://ca.slack-edge.com/TTDGSHWAZ-U01BQL39TDM-3b8fde16dc3a-512",
+        position: "CTO",
+        company: "Density Labs"
+      },
+      {
+        name: "Luis Elizondo",
+        imageUrl:
+          "https://ca.slack-edge.com/TTDGSHWAZ-UT4USLQ1X-gb07051f8281-512",
+        position: "CTO",
+        company: "Rever"
+      }
+    ];
+
     return {
-      members: [
-        Object.assign({}, sampleMember),
-        Object.assign({}, sampleMember),
-        Object.assign({}, sampleMember),
-        Object.assign({}, sampleMember),
-        Object.assign({}, sampleMember),
-        Object.assign({}, sampleMember),
-        Object.assign({}, sampleMember),
-        Object.assign({}, sampleMember),
-        Object.assign({}, sampleMember),
-        Object.assign({}, sampleMember)
-      ]
+      members
     };
   }
 };
