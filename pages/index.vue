@@ -246,7 +246,7 @@ export default {
         imageUrl:
           "https://ca.slack-edge.com/TTDGSHWAZ-U014ELJPX2T-28552529420f-512",
         position: "CTO",
-        company: "100 Ladrillos"
+        company: "Vetta"
       },
       {
         name: "Josue Padilla",
