@@ -115,7 +115,7 @@
         <p class="text-xl text-center mb-8 lg:text-2xl">
           Fundadores de Esquina CTO
         </p>
-        <div class="flex justify-around mx-3 lg:mx-0">
+        <div class="flex justify-center mx-3 lg:mx-0">
           <Member
             class="mr-2 sm:mr-8"
             name="Alberto Romero"
