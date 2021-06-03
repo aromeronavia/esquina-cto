@@ -6,10 +6,10 @@
       <Logo />
       <ul class="invisible text-xl sm:visible">
         <li class="inline-block mr-8">
-          <a href="#nosotros">Quienes Somos</a>
+          <a @click="scroll('nosotros')">Quienes Somos</a>
         </li>
         <li class="inline-block mr-8">
-          <a href="#contacto">Contacto</a>
+          <a @click="scroll('contacto')">Contacto</a>
         </li>
         <li class="inline-block font-bold text-primary">
           <a href="https://www.linkedin.com/groups/12533842/" target="_blank"
@@ -29,25 +29,31 @@
         </div>
         <ul
           v-if="isMenuOpen"
-          class="w-screen fixed left-0 top-0 bg-blue-100 pb-10 text-center"
+          class="w-screen fixed left-0 top-0 bg-blue-100 py-7 text-center"
         >
           <div
-            class="w-8 h-8 bg-primary text-white text-center rounded-full cursor-pointer absolute right-1 top-1"
+            class="w-8 h-8 bg-primary text-white text-center rounded-full cursor-pointer absolute right-4 top-2"
             @click="isMenuOpen = false"
           >
             x
           </div>
           <li
-            @click="isMenuOpen = false"
-            class="text-black mt-4 hover:underline"
+            @click="
+              isMenuOpen = false;
+              scroll('nosotros');
+            "
+            class="text-black cursor-pointer hover:underline"
           >
-            <a href="#nosotros">Quienes Somos</a>
+            <a>Quienes Somos</a>
           </li>
           <li
-            @click="isMenuOpen = false"
-            class="text-black mt-4 hover:underline"
+            @click="
+              isMenuOpen = false;
+              scroll('contacto');
+            "
+            class="text-black mt-4 cursor-pointer hover:underline"
           >
-            <a href="#contacto">Contacto</a>
+            <a>Contacto</a>
           </li>
           <li
             @click="isMenuOpen = false"
@@ -281,6 +287,29 @@ export default {
       isMenuOpen: false,
       members: members.sort(() => Math.random() - 0.5)
     };
+  },
+  methods: {
+    scroll(id) {
+      const offset = () => {
+        const el = document.getElementById(id);
+        var rect = el.getBoundingClientRect();
+        var scrollLeft =
+          window.pageXOffset || document.documentElement.scrollLeft;
+        var scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        const result = {
+          top: rect.top + scrollTop,
+          left: rect.left + scrollLeft
+        };
+        console.log(result);
+        return result;
+      };
+
+      const navbarHeight = 96;
+
+      scrollTo(0, offset().top - navbarHeight);
+    }
   }
 };
 </script>
