@@ -179,11 +179,11 @@ export default {
         position: "VP of Engineering"
       },
       {
-        name: "Genaro Madrid",
+        name: "Manuel de la Torre",
         imageUrl:
-          "https://ca.slack-edge.com/TTDGSHWAZ-UTDHDR5HT-1e7b405a58c1-512",
-        position: "CTO",
-        company: "MiFiel"
+          "https://ca.slack-edge.com/TTDGSHWAZ-UT0SML3DY-4ba82f51baec-512",
+        position: "Head of Product",
+        company: "Zenfi"
       },
       {
         name: "Andres Vejar",
@@ -214,11 +214,11 @@ export default {
         company: "Thredup"
       },
       {
-        name: "Manuel de la Torre",
+        name: "Cesar Díaz",
         imageUrl:
-          "https://ca.slack-edge.com/TTDGSHWAZ-UT0SML3DY-4ba82f51baec-512",
-        position: "Head of Product",
-        company: "Zenfi"
+          "https://media-exp1.licdn.com/dms/image/C4E03AQHSrOGttc-VBg/profile-displayphoto-shrink_800_800/0/1516904317257?e=1628121600&v=beta&t=7UHbONqUOY3n9yE-cQNthmI1bYUMskL5Io7_s1WJaQU",
+        position: "CTO",
+        company: "Bowhead Health"
       },
       {
         name: "Javier Coca",
