@@ -129,13 +129,6 @@
             position="CTO"
             company="Tu Identidad"
           />
-          <Member
-            class="ml-2 sm:ml-8"
-            name="Genaro Madrid"
-            imageUrl="https://ca.slack-edge.com/TTDGSHWAZ-UTDHDR5HT-1e7b405a58c1-512"
-            position="CTO"
-            company="MiFiel"
-          />
         </div>
         <p
           class="px-8 mt-9 pb-12 w-full text-center text-justify md:mx-auto md:w-1/2 md:px-0 md:pb-0 lg:w-full lg:mx-auto"
@@ -221,11 +214,11 @@ export default {
         position: "VP of Engineering"
       },
       {
-        name: "Manuel de la Torre",
+        name: "Genaro Madrid",
         imageUrl:
-          "https://ca.slack-edge.com/TTDGSHWAZ-UT0SML3DY-4ba82f51baec-512",
-        position: "Head of Product",
-        company: "Zenfi"
+          "https://ca.slack-edge.com/TTDGSHWAZ-UTDHDR5HT-1e7b405a58c1-512",
+        position: "CTO",
+        company: "MiFiel"
       },
       {
         name: "Andres Vejar",
@@ -233,6 +226,13 @@ export default {
           "https://ca.slack-edge.com/TTDGSHWAZ-UTFPDDE6A-37d85faea4df-512",
         position: "CIO",
         company: "Neubox"
+      },
+      {
+        name: "Manuel de la Torre",
+        imageUrl:
+          "https://ca.slack-edge.com/TTDGSHWAZ-UT0SML3DY-4ba82f51baec-512",
+        position: "Head of Product",
+        company: "Zenfi"
       },
       {
         name: "Abiee Echamea",
@@ -269,13 +269,6 @@ export default {
         position: "Executive Advisor - Engineering Director"
       },
       {
-        name: "Cesar Alcaraz",
-        imageUrl:
-          "https://ca.slack-edge.com/TTDGSHWAZ-U01BQL39TDM-3b8fde16dc3a-512",
-        position: "CTO",
-        company: "Density Labs"
-      },
-      {
         name: "Luis Elizondo",
         imageUrl:
           "https://ca.slack-edge.com/TTDGSHWAZ-UT4USLQ1X-gb07051f8281-512",
@@ -286,7 +279,7 @@ export default {
 
     return {
       isMenuOpen: false,
-      members
+      members: members.sort(() => Math.random() - 0.5)
     };
   }
 };
