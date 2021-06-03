@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <nav
-      class="h-24 flex items-center justify-between px-9 py-4 border-b border-gray-200"
+      class="h-24 flex items-center justify-between px-9 py-4 border-b border-gray-200 fixed w-screen bg-white"
     >
       <Logo />
       <ul class="invisible text-xl sm:visible">
@@ -18,7 +18,7 @@
         </li>
       </ul>
     </nav>
-    <section class="mt-5 mb-12 sm:mt-8 sm:ml-8 sm:ml-11 xl:mb-32">
+    <section class="pt-32 mb-12 sm:ml-11 xl:mb-32">
       <h1 class="text-3xl text-center mx-4 sm:ml-4 sm:text-left lg:w-1/3">
         Somos una comunidad que reúne líderes de tecnología en México
       </h1>
