@@ -17,6 +17,48 @@
           >
         </li>
       </ul>
+      <div class="text-xl sm:hidden">
+        <div
+          v-if="!isMenuOpen"
+          class="cursor-pointer"
+          @click="isMenuOpen = true"
+        >
+          <div class="w-8 h-1 mt-1 bg-black" />
+          <div class="w-8 h-1 mt-1 bg-black" />
+          <div class="w-8 h-1 mt-1 bg-black" />
+        </div>
+        <ul
+          v-if="isMenuOpen"
+          class="w-screen fixed left-0 top-0 bg-blue-100 pb-10 text-center"
+        >
+          <div
+            class="w-8 h-8 bg-primary text-white text-center rounded-full cursor-pointer absolute right-1 top-1"
+            @click="isMenuOpen = false"
+          >
+            x
+          </div>
+          <li
+            @click="isMenuOpen = false"
+            class="text-black mt-4 hover:underline"
+          >
+            <a href="#nosotros">Quienes Somos</a>
+          </li>
+          <li
+            @click="isMenuOpen = false"
+            class="text-black mt-4 hover:underline"
+          >
+            <a href="#contacto">Contacto</a>
+          </li>
+          <li
+            @click="isMenuOpen = false"
+            class="text-black mt-4 hover:underline"
+          >
+            <a href="https://www.linkedin.com/groups/12533842/" target="_blank"
+              >Únete al grupo</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
     <section class="pt-32 mb-12 sm:ml-11 xl:mb-32">
       <h1 class="text-3xl text-center mx-4 sm:ml-4 sm:text-left lg:w-1/3">
@@ -243,6 +285,7 @@ export default {
     ];
 
     return {
+      isMenuOpen: false,
       members
     };
   }
