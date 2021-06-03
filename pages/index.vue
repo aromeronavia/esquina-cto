@@ -231,7 +231,7 @@ export default {
         name: "Manuel de la Torre",
         imageUrl:
           "https://ca.slack-edge.com/TTDGSHWAZ-UT0SML3DY-4ba82f51baec-512",
-        position: "Head of Product",
+        position: "CTO",
         company: "Zenfi"
       },
       {
