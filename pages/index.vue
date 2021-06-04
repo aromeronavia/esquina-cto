@@ -57,7 +57,7 @@
           </li>
           <li
             @click="isMenuOpen = false"
-            class="text-black mt-4 hover:underline"
+            class="text-primary font-black mt-4 hover:underline cursor-pointer"
           >
             <a href="https://www.linkedin.com/groups/12533842/" target="_blank"
               >Únete al grupo</a
