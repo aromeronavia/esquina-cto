@@ -5,13 +5,13 @@
     >
       <Logo />
       <ul class="invisible text-xl sm:visible">
-        <li class="inline-block mr-8">
+        <li class="inline-block mr-8 cursor-pointer">
           <a @click="scroll('nosotros')">Quienes Somos</a>
         </li>
-        <li class="inline-block mr-8">
+        <li class="inline-block mr-8 cursor-pointer">
           <a @click="scroll('contacto')">Contacto</a>
         </li>
-        <li class="inline-block font-bold text-primary">
+        <li class="inline-block font-bold text-primary cursor-pointer">
           <a href="https://www.linkedin.com/groups/12533842/" target="_blank"
             >Únete al grupo</a
           >
