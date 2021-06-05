@@ -4,12 +4,17 @@
       class="h-24 flex items-center justify-between px-9 py-4 border-b border-gray-200 fixed w-screen bg-white"
     >
       <Logo />
-      <ul class="invisible text-xl sm:visible">
+      <ul class="invisible text-xl md:visible">
         <li class="inline-block mr-8 cursor-pointer">
           <a @click="scroll('nosotros')">Quienes Somos</a>
         </li>
         <li class="inline-block mr-8 cursor-pointer">
           <a @click="scroll('contacto')">Contacto</a>
+        </li>
+        <li class="inline-block mr-8 cursor-pointer">
+          <a href="https://esquina-cto.github.io/articulos/" target="_blank"
+            >Blog</a
+          >
         </li>
         <li class="inline-block font-bold text-primary cursor-pointer">
           <a href="https://www.linkedin.com/groups/12533842/" target="_blank"
@@ -17,7 +22,7 @@
           >
         </li>
       </ul>
-      <div class="text-xl sm:hidden">
+      <div class="text-xl md:hidden">
         <div
           v-if="!isMenuOpen"
           class="cursor-pointer"
