@@ -130,7 +130,7 @@
           <Member
             class="mr-2 sm:mr-8"
             name="Alberto Romero"
-            imageUrl="https://media-exp1.licdn.com/dms/image/C4D03AQGrpxlB5HsmCg/profile-displayphoto-shrink_800_800/0/1594865592548?e=1628121600&v=beta&t=-Quy4NvRzzJ1BvRq59P5tn0OS6kxNNFYjLiaSHlWIfE"
+            imageUrl="https://media-exp3.licdn.com/dms/image/C4E03AQE02tfoKURwow/profile-displayphoto-shrink_800_800/0/1624025802291?e=1629936000&v=beta&t=7PapxPp2qanscOT9iU0UBMToI9vlxDfNaRQwgtlwkJQ"
             position="Engineering Lead"
             company="JungleScout"
           />
